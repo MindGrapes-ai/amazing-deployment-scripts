@@ -30,5 +30,3 @@ status:
 clean: down
 	-docker rm frontend
 	-docker rm backend
-	-docker rm db
-	-docker rm redis
