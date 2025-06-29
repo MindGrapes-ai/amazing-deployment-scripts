@@ -5,8 +5,6 @@ services:
     container_name: db
     ports:
       - "5432:5432"
-    env_file:
-      - /root/.env.production
     environment:
       POSTGRES_USER: coursehub
       POSTGRES_PASSWORD: coursehub
