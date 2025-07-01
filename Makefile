@@ -1,4 +1,4 @@
-TAG = feature-get-ready-to-deploy
+TAG = dev
 
 deploy: pull clean up
 
