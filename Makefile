@@ -34,3 +34,9 @@ status:
 clean: down
 	-docker rm frontend
 	-docker rm backend
+
+frontend-exec:
+	docker exec -it frontend /bin/sh
+
+backend-exec:
+	docker exec -it backend /usr/bin/bash
