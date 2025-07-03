@@ -1,8 +1,12 @@
 TAG = dev
 
-deploy: pull clean up
+deploy: pull clean env up
 
 all: pull clean up logs
+
+env:
+	docker pull ghcr.io/managedkaos/create-env-file:main
+	docker run --rm --env PARAMETER_PATH="/coursehub/$(TAG)" ghcr.io/managedkaos/create-env-file:main > /root/.env
 
 up:
 	mkdir -p /mnt/elastic_file_system/database
